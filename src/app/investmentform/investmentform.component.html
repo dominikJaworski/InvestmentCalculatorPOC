@@ -1,0 +1,46 @@
+<form [formGroup]="inputForm" (ngSubmit)="Submit()">
+
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Enter Principal Amount" type="text" formControlName="principal" required
+        id="loanAmountInput">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Enter Interest Rate" type="text" formControlName="interestRate" required
+        id="interestRateInput">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Enter Term in Years" type="text" formControlName="termYears" required
+        id="termYearsInput">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Enter Monthly Payment" type="text" formControlName="monthlyPayment" required
+        id="monthlyPaymentInput">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Compound Periods</mat-label>
+      <mat-select formControlName="periods" required id="compoundPeriodsInput">
+        <mat-option *ngFor="let c of compoundingPeriods" [value]="c.periods">
+          {{c.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+
+    <button mat-flat-button color="primary" type="submit">Calculate</button>
+
+  </div>
+</form>
+
+<app-table [loanTableOutput]="loanTableOutput"></app-table>
+
+<!--<app-line-chart [data]="loanTableOutput"></app-line-chart> -->
