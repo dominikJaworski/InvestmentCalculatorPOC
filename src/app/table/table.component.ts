@@ -9,7 +9,9 @@ import { TableEntry } from '../models/TableEntry.model';
 export class TableComponent implements OnChanges {
 
   @Input() loanTableOutput: TableEntry[] | null;
-  constructor() { }
+  constructor() {
+    this.loanTableOutput = [];
+   }
 
   ngOnChanges(changes: SimpleChanges) {
     console.log(changes);

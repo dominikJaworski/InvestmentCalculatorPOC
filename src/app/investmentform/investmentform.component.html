@@ -41,6 +41,8 @@
   </div>
 </form>
 
-<app-table [loanTableOutput]="loanTableOutput"></app-table>
-
+<div *ngIf="submitted">
+  <app-table [loanTableOutput]="loanTableOutput"></app-table>
+  <app-linechart [loanTableOutput]="loanTableOutput"></app-linechart>
+</div>
 <!--<app-line-chart [data]="loanTableOutput"></app-line-chart> -->

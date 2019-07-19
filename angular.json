@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/chart.js/dist/Chart.css",
               "src/styles.scss"
             ],
             "scripts": []
