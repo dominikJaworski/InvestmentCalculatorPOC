@@ -2,7 +2,7 @@ import { Component, OnChanges, Input, SimpleChanges, ViewChild } from '@angular/
 import { LINE_CHART_COLORS } from '../models/chart.colors';
 import { TableEntry } from '../models/TableEntry.model';
 import { ChartDataSets, ChartOptions } from 'chart.js';
-import { Color, BaseChartDirective, Label } from 'ng2-charts';
+import { Color, Label } from 'ng2-charts';
 
 @Component({
   selector: 'app-linechart',
@@ -14,8 +14,8 @@ export class LinechartComponent {
   lineChartData: number[] = [];
   lineChartLabels: Label[] = [];
   lineChartOptions: (ChartOptions & { annotation: any }) = {
-    responsive: true,
-    maintainAspectRatio: false,
+    responsive: false,
+    //maintainAspectRatio: false,
     scales: {
       // We use this empty structure as a placeholder for dynamic theming.
       xAxes: [{}],
@@ -42,17 +42,6 @@ export class LinechartComponent {
     annotation: {
       annotations: [
         {
-          type: 'line',
-          mode: 'vertical',
-          scaleID: 'x-axis-0',
-          value: 'March',
-          borderColor: 'orange',
-          borderWidth: 2,
-          label: {
-            enabled: true,
-            fontColor: 'orange',
-            content: 'LineAnno'
-          }
         },
       ],
     },

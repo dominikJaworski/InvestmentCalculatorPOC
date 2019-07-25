@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { InvestmentformComponent } from './investmentform/investmentform.component';
 import { LinechartComponent } from './linechart/linechart.component';
 import { TableComponent } from './table/table.component';
-import { ChartsModule, BaseChartDirective } from 'ng2-charts';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -33,8 +33,7 @@ import { ChartsModule, BaseChartDirective } from 'ng2-charts';
     MatSelectModule,
     ReactiveFormsModule,
     FormsModule,
-    ChartsModule,
-    BaseChartDirective
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
