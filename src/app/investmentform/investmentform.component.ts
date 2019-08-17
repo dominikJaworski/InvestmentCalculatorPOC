@@ -60,7 +60,7 @@ export class InvestmentformComponent implements OnInit {
       const monthlyPayment = this.inputForm.get('monthlyPayment');
       const mp = monthlyPayment ? parseFloat(monthlyPayment.value) : 0;
 
-      const compoundingPeriods = this.inputForm.get('compoundingPeriods');
+      const compoundingPeriods = this.inputForm.get('periods');
       const cp = compoundingPeriods ? parseFloat(compoundingPeriods.value) : 12;
 
       console.log('Compound Periods:', cp);
